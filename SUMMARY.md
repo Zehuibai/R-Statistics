@@ -4,6 +4,7 @@
 
 ## Datamanagement
 
+* [Working](datamanagement/working.md)
 * [Data Management](datamanagement/untitled-1/README.md)
   * [Import/Export](datamanagement/untitled-1/untitled-2.md)
   * [Date lubridate](datamanagement/untitled-1/date.md)
@@ -14,6 +15,8 @@
 * [Apache Spark](datamanagement/spark/README.md)
   * [Spark using R](datamanagement/spark/untitled.md)
 * [Basic](datamanagement/basic.md)
+* [Block Randomization](datamanagement/block-randomization.md)
+* [Randomlist Envelopes](datamanagement/randomlist-envelopes.md)
 
 ## Regression
 
@@ -26,6 +29,7 @@
   * [Tricks using Proc Mixed](regression/untitled/proc-mixed.md)
   * [Proc NLMIXED](regression/untitled/proc-nlmixed.md)
   * [SAS Models with Single Random Effect](regression/untitled/sas-models-with-single-random-effect.md)
+  * [Models with Multiple Random Effects](regression/untitled/models-with-multiple-random-effects.md)
 
 ## Statistical Analysis
 
