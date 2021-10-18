@@ -20,7 +20,6 @@
 
 ## Regression
 
-* [Models Summary sjPlot](regression/models-summary-html.md)
 * [Genaralized linear model](regression/regression.md)
 * [Mixed Model](regression/untitled/README.md)
   * [Generalized Linear Regression Models for Repeated Measures](regression/untitled/generalized-linear-regression-models-for-repeated-measures.md)
