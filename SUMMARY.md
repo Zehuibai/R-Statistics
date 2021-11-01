@@ -25,7 +25,6 @@
   * [Generalized Linear Regression Models for Repeated Measures](regression/untitled/generalized-linear-regression-models-for-repeated-measures.md)
   * [Randomized Block Design](regression/untitled/single-random-effect.md)
   * [GEE](regression/untitled/gee.md)
-  * [Tricks using Proc Mixed](regression/untitled/proc-mixed.md)
   * [Proc NLMIXED](regression/untitled/proc-nlmixed.md)
   * [SAS Models with Single Random Effect](regression/untitled/sas-models-with-single-random-effect.md)
   * [Models with Multiple Random Effects](regression/untitled/models-with-multiple-random-effects.md)
@@ -41,9 +40,6 @@
   * [MICE RF Masterarbeit](statistical-analysis/missing-values/mice-rf.md)
 * [Sample Size](statistical-analysis/untitled-1/README.md)
   * [Wilcoxon rank-sum test](statistical-analysis/untitled-1/wilcoxon-rank-sum-test.md)
-* [Time Series Analysis](statistical-analysis/time-series/README.md)
-  * [Basic Time Series](statistical-analysis/time-series/machine-learning.md)
-  * [Untitled](statistical-analysis/time-series/untitled.md)
 * [ATE & ATT](statistical-analysis/ate-and-att/README.md)
   * [Propensity Score](statistical-analysis/ate-and-att/propensity-score-methods.md)
 

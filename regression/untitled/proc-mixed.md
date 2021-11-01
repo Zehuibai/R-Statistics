@@ -1,2 +1,0 @@
-# Tricks using Proc Mixed
-
