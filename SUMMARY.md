@@ -32,7 +32,6 @@
 ## Statistical Analysis
 
 * [Resampling Methods for CIs](statistical-analysis/resampling-methods-for-cis.md)
-* [Distributions](statistical-analysis/distributions.md)
 * [Nonparametric Regression](statistical-analysis/proc-nparlway.md)
 * [Multiple Imputation](statistical-analysis/missing-values/README.md)
   * [MICE R](statistical-analysis/missing-values/multiple-imputation.md)
@@ -40,16 +39,12 @@
   * [MICE RF Masterarbeit](statistical-analysis/missing-values/mice-rf.md)
 * [Sample Size](statistical-analysis/untitled-1/README.md)
   * [Wilcoxon rank-sum test](statistical-analysis/untitled-1/wilcoxon-rank-sum-test.md)
-* [ATE & ATT](statistical-analysis/ate-and-att/README.md)
-  * [Propensity Score](statistical-analysis/ate-and-att/propensity-score-methods.md)
 
 ## Machine Learning
 
 * [Regression Algorithm](machine-learning/regression-algorithm/README.md)
   * [Gradient Descent](machine-learning/regression-algorithm/gradient-descent.md)
   * [Bayesian Theory](machine-learning/regression-algorithm/bayesian-theory.md)
-  * [Regularization](machine-learning/regression-algorithm/regularization.md)
-  * [Text](machine-learning/regression-algorithm/untitled.md)
 * [Classification Algorithm](machine-learning/classification-algorithm/README.md)
   * [ROC and Cutoff](machine-learning/classification-algorithm/roc-and-cutoff.md)
   * [Decision Tree Model](machine-learning/classification-algorithm/decision-tree.md)
