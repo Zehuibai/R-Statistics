@@ -44,13 +44,11 @@
 
 * [Regression Algorithm](machine-learning/regression-algorithm/README.md)
   * [Gradient Descent](machine-learning/regression-algorithm/gradient-descent.md)
-  * [Bayesian Theory](machine-learning/regression-algorithm/bayesian-theory.md)
 * [Classification Algorithm](machine-learning/classification-algorithm/README.md)
   * [ROC and Cutoff](machine-learning/classification-algorithm/roc-and-cutoff.md)
   * [Logistic Regression](machine-learning/classification-algorithm/logistic-regression.md)
   * [Linear Discriminant Analysis (LDA)](machine-learning/classification-algorithm/linear-discriminant-analysis.md)
   * [Multivariate Adaptive Regression Spline](machine-learning/classification-algorithm/mars.md)
-  * [K-Nearest Neighbors](machine-learning/classification-algorithm/k-nearest-neighbors.md)
 * [Cluster Algorithm](machine-learning/cluster-algorithm/README.md)
   * [Hierarchical Clustering](machine-learning/cluster-algorithm/hierarchical-clustering.md)
   * [K-means Clustering](machine-learning/cluster-algorithm/cluster-analysis.md)
