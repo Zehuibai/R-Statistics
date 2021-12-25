@@ -42,7 +42,7 @@ $$
 
 #### Link function
 
-* Traditional Linear Model: $$g(\mu)=\mu$$ 
+* Traditional Linear Model: $$g(\mu)=\mu$$&#x20;
 * Logistic Regression (logit): $$g(\mu)=\log \left(\frac{\mu}{1-\mu}\right)$$
 * Poisson Regression in Log Linear Model: $$g(\mu)=\log (\mu)$$
 
@@ -168,7 +168,7 @@ $$
 \hat{\phi}=\frac{1}{N-k} \sum_{i=1}^{n} \sum_{j=1}^{n_{i}} \frac{\left(Y_{i j}-\hat{\mu}_{i j}\right)^{2}}{v\left(\hat{\mu}_{i j}\right)} \omega_{i j}=\frac{1}{N-k} \sum_{i=1}^{n} \sum_{j=1}^{n_{i}} \hat{e}_{i j}^{2}
 $$
 
-#### Calculation $$\hat \beta$$ 
+#### Calculation $$\hat \beta$$&#x20;
 
 1. 假设独立性（例如MLE），根据常规GLM计算$$\beta$$的第一个估算器
 2. 计算估计的皮尔逊残差，从而计算$$\mathbf{R}_{i}(\alpha)$$和$$\phi$$的估计值
@@ -216,7 +216,7 @@ $$
 
 **如果**$$\mathbf{R}_{i}(\alpha)$$**正确指定**
 
-Kovarianz $$\hat{\beta}$$$$\widehat{\operatorname{Cov}}(\hat{\beta})=\left[\sum_{i=1}^{N} \mathbf{X}_{i}^{T} \mathbf{D}_{i} \mathbf{V}_{i}^{-1} \mathbf{D}_{i} \mathbf{X}_{i}\right]^{-1}$$ 
+Kovarianz $$\hat{\beta}$$$$\widehat{\operatorname{Cov}}(\hat{\beta})=\left[\sum_{i=1}^{N} \mathbf{X}_{i}^{T} \mathbf{D}_{i} \mathbf{V}_{i}^{-1} \mathbf{D}_{i} \mathbf{X}_{i}\right]^{-1}$$&#x20;
 
 $$
 \widehat{\operatorname{Cov}}(\hat{\beta})=\widehat{\operatorname{Cov}}_{S}(\hat{\beta})
@@ -236,7 +236,7 @@ $$
 
 mit $$r=\operatorname{Rang}(\mathbf{C})$$ Wir können $$H_{0}$$ verwerfen, falls $$W \geq Q_{r}^{\chi^{2}}(1-\alpha)$$
 
-#### Score Tests 
+#### Score Tests&#x20;
 
 #### Without Likelihood-Ratio-Test
 
@@ -323,7 +323,7 @@ $$
 \end{array}\right.
 $$
 
-但是, 不能保证估计矩阵 $$\mathbf{R}_{i}(\alpha)$$ 是可逆的, 特别是对于不平衡的数据集（对个人的测量数量非常不同），可能会出现数字问题. 
+但是, 不能保证估计矩阵 $$\mathbf{R}_{i}(\alpha)$$ 是可逆的, 特别是对于不平衡的数据集（对个人的测量数量非常不同），可能会出现数字问题.&#x20;
 
 对非结构化相关矩阵的修改是假设在两次测量之间的某个（时间）间隔不再存在任何相关性，否则无需进行任何假设 (非平稳相关矩阵)
 
@@ -342,7 +342,7 @@ $$
 纵向模型数据分析涉及的步骤：
 
 * 1）通过指定链接函数选择模型，该函数描述了希望使用的模型形式
-* 2）选择方差-协方差结构（指定每个主题的工作相关结构） 
+* 2）选择方差-协方差结构（指定每个主题的工作相关结构）&#x20;
 * 3）选择因变量的分布
 * 4）评估模型的拟合优度和方差协方差结构
 
@@ -428,8 +428,8 @@ proc genmod data=MIdata descending;
 * **Subject=id** 指定各个主题由变量id标识。变量id也必须在class语句中列出。效果的每个不同值或级别标识一个不同的主题或群集。假定来自不同主题的响应在统计上是独立的，并且假定主题内的响应是相关的。
 * **Type=cs** 指定用于对受试者反应的相关性进行建模的工作相关性矩阵的结构。默认的工作相关类型是独立的。类型=的可能性包括 autoregressive (AR), exchangeable (EXCH or CS), independent (IND), m dependent (MDEP), unstructured (UN or UNSTR), and user specified correlation matrix (USER or FIXED).\
   如果响应是单变量类型，则分配是二项式的，数据是binary，而不是Type =语句，可以通过在repeated 语句中使用**logor**选项来采用交替的最小二乘。 这指定了 log odds ratio 的回归结构，该比对率比值用于对受试者对二进制数据的响应的关联进行建模，而不使用工作相关性。 logor =的可能性包括exchangeable, fully parameterized clusters, and nested, among others.(可交换的，完全参数化的群集和嵌套的群集)。
-* **Corrw** 显示估计的工作相关矩阵。 
-* **Covb **显示估计的回归参数协方差矩阵。 显示基于模型的协方差和基于经验的协方差。(**model-based and empirical**)
+* **Corrw** 显示估计的工作相关矩阵。&#x20;
+* **Covb** 显示估计的回归参数协方差矩阵。 显示基于模型的协方差和基于经验的协方差。(**model-based and empirical**)
 
 ### Poisson regression
 
@@ -447,7 +447,7 @@ where
 * $$t_{i j}:$$ length of interval
 * $$x_{i 1}=\left\{\begin{array}{l}1: \text { weeks } 8-16 \\ 0: \text { weeks } 0-8\end{array}\right.$$
 * $$x_{i 2}=\left\{\begin{array}{l}1: \text { progabide group } \\ 0: \text { placebo group }\end{array}\right.$$
-* The correlations between the counts are modeled as $$r_{i j}=\alpha, i \neq j$$ (**exchangeable **correlations).
+* The correlations between the counts are modeled as $$r_{i j}=\alpha, i \neq j$$ (**exchangeable** correlations).
 
 **Interpretation of Regression Parameters**
 

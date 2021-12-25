@@ -2,7 +2,7 @@
 
 假设有一个随机样本的观测值。感兴趣的问题是估计基础分布的统计θ。该统计信息可以是单变量（例如均值，方差，中位数，众数），也可以是双变量（例如相关系数）。如果基本分布是已知的，那么我们可以应用发达的理论来找到采样分布，并在参数设置中给出点估计和置信区间。但是，如果对分布情况一无所知，则必须采用非参数方法。考虑两种相关技术：**jackknife and bootstrap.**
 
-当θ是观测值的平滑函数（例如均值，方差或相关系数）时，**jackknife **法效果很好。\
+当θ是观测值的平滑函数（例如均值，方差或相关系数）时，**jackknife** 法效果很好。\
 ****但是，如果该统计信息不平滑，例如中位数或四分位数，则建议改用**bootstrap**法。此外，**bootstrap**函数在提供θ的整个采样分布估计值（而不仅仅是间隔估计值）的意义上更具通用性。当应用自举方法时，有关采样分布的所有信息都来自样本内部，而没有任何其他假设。
 
 ## Jackknife
@@ -57,7 +57,7 @@ $$
   STOP;
   RUN;
   ```
-* Step 3. We compute the jackknife replicates $$\widehat{\theta}_{j}, j=1, \ldots, n$$ 
+* Step 3. We compute the jackknife replicates $$\widehat{\theta}_{j}, j=1, \ldots, n$$&#x20;
 * ```
   ## The syntax for the UNIVARIATE procedure is
   PROC UNIVARIATE DATA=jackknife samples name;
@@ -72,7 +72,7 @@ $$
   BY sample count;
   RUN;
   ```
-* Step 4. We calculate the pseudovalues $$\widehat{\theta}_{j}^{*}, j=1, \ldots, n$$ 
+* Step 4. We calculate the pseudovalues $$\widehat{\theta}_{j}^{*}, j=1, \ldots, n$$&#x20;
 * ```
   ## The syntax for the UNIVARIATE procedure is
   DATA jackknife replicates name;

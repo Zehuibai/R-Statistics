@@ -21,13 +21,13 @@ $$
 
 ### Assumptions
 
-**Verteilungsannahme** 
+**Verteilungsannahme**&#x20;
 
 $$
 \qquad f\left(y{i} \mid \theta{i}\right)=\exp \left(\frac{y{i} \theta{i}-b\left(\theta{i}\right)}{\phi} \omega{i}-c\left(y{i}, \phi, \omega{i}\right)\right)
 $$
 
-abhängiger Dispersionsparameter. Für $$\mathrm{E}\left(y{i} \mid \boldsymbol{x}{i}\right)=\mu{i}$$ _und _$$\operatorname{Var}\left(y{i} \mid \boldsymbol{x}_{i}\right)$$ gilt somit
+abhängiger Dispersionsparameter. Für $$\mathrm{E}\left(y{i} \mid \boldsymbol{x}{i}\right)=\mu{i}$$ _und_ $$\operatorname{Var}\left(y{i} \mid \boldsymbol{x}_{i}\right)$$ gilt somit
 
 $$
 \mathrm{E}\left(y_{i} \mid \boldsymbol{x}_{i}\right)=\mu_{i}=b^{\prime}\left(\theta_{i}\right), \quad \operatorname{Var}\left(y_{i} \mid \boldsymbol{x}_{i}\right)=\sigma_{i}^{2}=\phi b^{\prime \prime}\left(\theta_{i}\right) / \omega_{i}
@@ -35,15 +35,15 @@ $$
 
 **Strukturannahme**
 
-Der (bedingte) Erwartungswert** **$$\mu{i}$$ ist mit dem linearen Prädiktor $$\eta{i}=\boldsymbol{x}{i}^{\prime} \boldsymbol{\beta}=\beta_{0}+\beta_{1} x_{i 1}+\ldots+\beta_{k} x_{i k}$$ durch
+Der (bedingte) Erwartungswert **** $$\mu{i}$$ ist mit dem linearen Prädiktor $$\eta{i}=\boldsymbol{x}{i}^{\prime} \boldsymbol{\beta}=\beta_{0}+\beta_{1} x_{i 1}+\ldots+\beta_{k} x_{i k}$$ durch
 
 $$
 \mu_{i}=h\left(\eta_{i}\right)=h\left(\boldsymbol{x}_{i}^{\prime} \boldsymbol{\beta}\right) \quad b z w . \quad \eta_{i}=g\left(\mu_{i}\right)
 $$
 
-verknüpft, wobei 
+verknüpft, wobei&#x20;
 
-* h eine (eineindeutige und zweimal differenzierbare) Responsefunktion und 
+* h eine (eineindeutige und zweimal differenzierbare) Responsefunktion und&#x20;
 * g die Linkfunktion, d.h. die Umkehrfunktion $$g=h^{-1}$$ von $$h$$ ist.
 
 ![Einfache Exponentialfamilien](<../.gitbook/assets/image (12).png>)
@@ -56,11 +56,11 @@ $$
 H_{0}: \boldsymbol{C} \boldsymbol{\beta}=\boldsymbol{d} \quad \text { gegen } \quad H_{1}: \boldsymbol{C} \boldsymbol{\beta} \neq \boldsymbol{d}
 $$
 
-Teststatistiken 
+Teststatistiken&#x20;
 
-1. Likelihood-Quotienten-Statistik: $$l q=-2{l(\tilde{\boldsymbol{\beta}})-l(\hat{\boldsymbol{\beta}})}$$ . 
-2. Wald-Statistik: $$W=(\boldsymbol{C} \hat{\boldsymbol{\beta}}-\boldsymbol{d})^{\prime}\left[\boldsymbol{C} \boldsymbol{F}^{-1}(\hat{\boldsymbol{\beta}}) \boldsymbol{C}^{\prime}\right]^{-1}(\boldsymbol{C} \hat{\boldsymbol{\beta}}-\boldsymbol{d})$$ 
-3. Score-Statistik: $$u=\boldsymbol{s}^{\prime}(\tilde{\boldsymbol{\beta}}) \boldsymbol{F}^{-1}(\tilde{\boldsymbol{\beta}}) \boldsymbol{s}(\tilde{\boldsymbol{\beta}})$$ . 
+1. Likelihood-Quotienten-Statistik: $$l q=-2{l(\tilde{\boldsymbol{\beta}})-l(\hat{\boldsymbol{\beta}})}$$ .&#x20;
+2. Wald-Statistik: $$W=(\boldsymbol{C} \hat{\boldsymbol{\beta}}-\boldsymbol{d})^{\prime}\left[\boldsymbol{C} \boldsymbol{F}^{-1}(\hat{\boldsymbol{\beta}}) \boldsymbol{C}^{\prime}\right]^{-1}(\boldsymbol{C} \hat{\boldsymbol{\beta}}-\boldsymbol{d})$$&#x20;
+3. Score-Statistik: $$u=\boldsymbol{s}^{\prime}(\tilde{\boldsymbol{\beta}}) \boldsymbol{F}^{-1}(\tilde{\boldsymbol{\beta}}) \boldsymbol{s}(\tilde{\boldsymbol{\beta}})$$ .&#x20;
 
 Dabei ist $$\tilde{\boldsymbol{\beta}}$$ der ML-Schätzer unter der Restriktion $$H_{0}$$ . Testentscheidungen Für großes n gilt unter $$H_0$$ ​ approximativ:
 

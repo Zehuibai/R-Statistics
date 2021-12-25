@@ -20,11 +20,11 @@ MI具有三个基本阶段：
 2. Analysis Phase: Each of the m complete data sets is then analyzed using a statistical method of interest (e.g. linear regression).
 3. Pooling Phase: The parameter estimates (e.g. coefficients and standard errors) obtained from each analyzed data set are then combined for inference.
 
-### Compatibility 
+### Compatibility&#x20;
 
 在开发归因模型时，重要的是评估归因模型是“同类的”还是与分析模型一致的(congenial)。一致性意味着您的估算模型包括（至少）包括您的分析或估计模型中相同的变量。这包括评估您的假设所需的对变量的任何转换。这可以包括对数转换，交互作用项或将连续变量重新编码为分类形式（如果在以后的分析中将以此方式使用的话）。其原因与先前关于多重插补目的的评论有关。由于我们正在尝试再现适当的方差/协方差矩阵以进行估算，因此应该同时表示和估算我们的分析变量之间的所有关系。否则，您将假设值与未包含在插补模型中的变量的相关系数为零，从而进行插补。这将导致低估分析中感兴趣的参数与失去检测可能感兴趣的数据属性（例如非线性和统计交互作用）的能力之间的关联。
 
-###  Examine Missing Data Patterns
+### &#x20;Examine Missing Data Patterns
 
 指定选项nimpute = 0（指定要创建的零估算数据集），可以在不实际执行完整估算的情况下请求“缺少数据模式”表。
 
@@ -76,13 +76,13 @@ class read_flag;
 run;
 ```
 
-##  **MI using multivariate normal distribution (MVN)**
+## &#x20;**MI using multivariate normal distribution (MVN)**
 
-选择插补一个或多个变量时，您要做出的第一个决定是要插补变量的分布类型。 SAS中可用的一种方法是使用马尔可夫链蒙特卡洛（Markov Chain Monte Carl，MCMC），它假定插补模型中的所有变量都具有联合多元正态分布。这可能是多重插补最常用的参数方法。所使用的特定算法称为数据增强（data augmentatio** **DA）算法，它属于MCMC程序系列。该算法通过从条件分布（在这种情况下为多元正态）中提取给定观察数据的情况来填充缺失数据。在大多数情况下，仿真研究表明，即使在给定足够大样本量的情况下违反正态性假设的情况下，假设MVN分布也会导致可靠的估计（Demirtas等，2008； KJ Lee，2010）。但是，当样本量相对较小且信息丢失的比例较高时，会观察到偏差估计。（我们将需要为名义分类变量创建虚拟变量，以便可以解释每个级别的参数估计）
+选择插补一个或多个变量时，您要做出的第一个决定是要插补变量的分布类型。 SAS中可用的一种方法是使用马尔可夫链蒙特卡洛（Markov Chain Monte Carl，MCMC），它假定插补模型中的所有变量都具有联合多元正态分布。这可能是多重插补最常用的参数方法。所使用的特定算法称为数据增强（data augmentatio **** DA）算法，它属于MCMC程序系列。该算法通过从条件分布（在这种情况下为多元正态）中提取给定观察数据的情况来填充缺失数据。在大多数情况下，仿真研究表明，即使在给定足够大样本量的情况下违反正态性假设的情况下，假设MVN分布也会导致可靠的估计（Demirtas等，2008； KJ Lee，2010）。但是，当样本量相对较小且信息丢失的比例较高时，会观察到偏差估计。（我们将需要为名义分类变量创建虚拟变量，以便可以解释每个级别的参数估计）
 
 ### Conduct MI
 
-数据集“ a_mvn”，其中包含每个插补的参数估计值和关联的协方差矩阵。需要方差/协方差矩阵来估计标准误差。此步骤将参数估计值合并为一组统计数据，这些统计数据适当地反映了与估算值相关的不确定性。系数只是对10个回归模型中的每一个估计的各个系数的算术平均值。对参数估计值求平均可抑制变化，从而提高效率并减少采样变化。对每个变量的标准误差的估计使用Rubin规则
+数据集“ a\_mvn”，其中包含每个插补的参数估计值和关联的协方差矩阵。需要方差/协方差矩阵来估计标准误差。此步骤将参数估计值合并为一组统计数据，这些统计数据适当地反映了与估算值相关的不确定性。系数只是对10个回归模型中的每一个估计的各个系数的算术平均值。对参数估计值求平均可抑制变化，从而提高效率并减少采样变化。对每个变量的标准误差的估计使用Rubin规则
 
 ```
 ## 指定要使用的插补模型和要创建的插补数据集的数量
@@ -135,7 +135,7 @@ $$
 
 * Relative Increases in Variance  ($$[V_B + V_B/m]/V_W$$)
 * Fraction of Missing Information ($$\text{FMI} = [V_B+ V_B/m ]/V_T$$)
-* Relative Efficiency: 估算的相对效率（RE）（估计真实总体参数的程度）与缺失信息的数量以及所执行的估算的数量（m）有关。当丢失的信息量非常低时，仅执行少量估算即可获得效率（大多数文献中给出的最小数量为5）。但是，当丢失大量信息时，通常需要更多的估算才能获得足够的参数估计效率。即使m很小，也可以获得相对较好的效率。但是，这并不意味着可以很好地估计标准误差。 对于正确的标准误差估计，通常需要更多的估算，因为估算数据集之间的变异性会在估算值周围合并必要的不确定性。 RE，m和FMI之间的直接关系为： $$\text{RE}=1 /（1 + \text{FMI} / m）$$ 
+* Relative Efficiency: 估算的相对效率（RE）（估计真实总体参数的程度）与缺失信息的数量以及所执行的估算的数量（m）有关。当丢失的信息量非常低时，仅执行少量估算即可获得效率（大多数文献中给出的最小数量为5）。但是，当丢失大量信息时，通常需要更多的估算才能获得足够的参数估计效率。即使m很小，也可以获得相对较好的效率。但是，这并不意味着可以很好地估计标准误差。 对于正确的标准误差估计，通常需要更多的估算，因为估算数据集之间的变异性会在估算值周围合并必要的不确定性。 RE，m和FMI之间的直接关系为： $$\text{RE}=1 /（1 + \text{FMI} / m）$$&#x20;
 
 After performing an imputation it is also useful to look at means, frequencies and box plots comparing observed and imputed values to assess if the range appears reasonable. You may also want to examine plots of residuals and outliers for each imputed dataset individually. If anomalies are evident in only a small number of imputations then this indicates a problem with the imputation model (White et al, 2010).
 
@@ -154,14 +154,14 @@ proc mi data= ats.hsb_mar nimpute=10 out=mi_mvn;
 run;
 ```
 
-##  **MI using Fully Conditional Specification**
+## &#x20;**MI using Fully Conditional Specification**
 
 SAS中可用的第二种方法使用完全条件方法（FCS）来估算缺少的变量，该方法不采用联合分布，而是为每个估算变量使用单独的条件分布。如果您要估算的变量只能采用特定值，例如逻辑模型的二进制结果或泊松模型的计数变量，则可能需要此规范。
 
 可用的FCS方法是：
 
 * discriminant function and logistic regression for binary/categorical variables (判别函数方法允许用户指定组成员资格的先验概率。在判别函数中，默认情况下只有连续变量可以是协变量。)
-* linear regression and predictive mean matching for continuous variables. 
+* linear regression and predictive mean matching for continuous variables.&#x20;
 * by default the discriminant function and regression are used.
 
 ### Conduct MI

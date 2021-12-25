@@ -135,7 +135,7 @@ $$
 \frac{(b-1)(t-1) \hat{\sigma}^{2}}{\chi_{(1-\alpha / 2)(b-1)(t-1)}^{2}} \leq \sigma^{2} \leq \frac{(b-1)(t-1) \hat{\sigma}^{2}}{\chi_{(\alpha / 2)(b-1)(t-1)}^{2}}
 $$
 
-where $$\chi_{(1-\alpha / 2),(b-1)(t-1)}^{2}$$ and$$\chi_{\alpha / 2,(b-1)(t-1)}^{2}$$are the lower and upper $$\alpha / 2$$ percentage points of a central chi-square distribution with $$(b-1) \times(t-1)$$ degrees of freedom, respectively. 
+where $$\chi_{(1-\alpha / 2),(b-1)(t-1)}^{2}$$ and$$\chi_{\alpha / 2,(b-1)(t-1)}^{2}$$are the lower and upper $$\alpha / 2$$ percentage points of a central chi-square distribution with $$(b-1) \times(t-1)$$ degrees of freedom, respectively.&#x20;
 
 #### Estimation of $$\sigma_{b}^{2}$$
 
@@ -190,7 +190,7 @@ covtest / cl(type=elr);
 在某些Block应用中，每个Block中没有足够的实验单元来容纳所有治疗方法。不完整的块设计是在每个块中仅应用部分处理的设计。应该选择进入每个模块的处理方式，以便提供与实验目标有关的最多信息。三种类型的不完整块设计是：
 
 * 平衡不完整块设计（BIBD）
-  * balanced incomplete block designs 
+  * balanced incomplete block designs&#x20;
 * 部分平衡不完整块设计（PBIBD）
   * partially balanced incomplete block design
 * 不平衡不完整块设计
@@ -206,13 +206,13 @@ covtest / cl(type=elr);
   \
   块内分析可用于引入最小二乘处理方法（也称为调整后的方法）和未调整的算术方法之间的区别，以及假设的I型检验和III型检验之间的相关区别。您可以使用PROC GLM，PROC GLIMMIX或PROC MIXED来实现块内（固定块效果）分析。\
 
-* **combined inter- and intra-block analysis **在另一种方法（称为块间和块内组合分析）中，块效应被认为是随机的。在大多数情况下，使用块差异提供的信息（称为块间信息恢复）可以提高所得分析的准确性和准确性。但是，块内分析对于引入最小二乘处理方法（也称为调整后的方法）和未调整的算术方法之间的区别以及假设的I型检验和III型检验之间的相关区别非常有用。\
+* **combined inter- and intra-block analysis** 在另一种方法（称为块间和块内组合分析）中，块效应被认为是随机的。在大多数情况下，使用块差异提供的信息（称为块间信息恢复）可以提高所得分析的准确性和准确性。但是，块内分析对于引入最小二乘处理方法（也称为调整后的方法）和未调整的算术方法之间的区别以及假设的I型检验和III型检验之间的相关区别非常有用。\
   \
   To do combined inter- and intra-block (random block effect) analysis, you must use either PROC GLIMMIX or PROC MIXED.
 
 ### Unbalanced Two-Way Mixed Model
 
-Models for an incomplete block design are the same as for an RCBD. 
+Models for an incomplete block design are the same as for an RCBD.&#x20;
 
 $$
 y_{i j}=\mu+\tau_{i}+b_{j}+e_{i j}
@@ -303,14 +303,14 @@ proc glimmix data=bond plots=(meanplot diffplot);
 run;
 ```
 
-* ESTIMATE和CONTRAST语句用于估计和检验关于混合模型中各项的线性组合的假设，包括随机效应。 
-  * GLIMMIX过程中的ESTIMATE语句允许进行多行估计，并且可以针对多重性调整相应的t检验。 
-  * CONTRAST语句可以由几个线性组合组成，其中所得的F统计量可以同时检验参数的线性组合集合等于零的假设。 
+* ESTIMATE和CONTRAST语句用于估计和检验关于混合模型中各项的线性组合的假设，包括随机效应。&#x20;
+  * GLIMMIX过程中的ESTIMATE语句允许进行多行估计，并且可以针对多重性调整相应的t检验。&#x20;
+  * CONTRAST语句可以由几个线性组合组成，其中所得的F统计量可以同时检验参数的线性组合集合等于零的假设。&#x20;
 * LSMEANS陈述产生对治疗均值和均值差的估计和检验。
-* DIFF选项获得均值差。 
-* PLOT选项提供了不同的可视化处理方式和差异的方式。 
+* DIFF选项获得均值差。&#x20;
+* PLOT选项提供了不同的可视化处理方式和差异的方式。&#x20;
   * MEANPLOT显示了处理手段
-  * CL选项将95％的置信范围置于每个均值估计值的上方和下方。 
+  * CL选项将95％的置信范围置于每个均值估计值的上方和下方。&#x20;
   * DIFFPLOT显示了所有成对差异的95％置信限，并对它们进行了绘制，以便可以很容易地看到统计上显着和不显着的差异
 
 #### Standard Errors for Mean Comparisons
@@ -383,7 +383,7 @@ run;
 
 由于混合模型的协方差结构更复杂，因此涉及到的功率和精度计算更加复杂
 
-* 治疗效果或对比度，定义为线性组合$$\mathbf{K}^{\prime} \boldsymbol{\beta}$$. 
+* 治疗效果或对比度，定义为线性组合$$\mathbf{K}^{\prime} \boldsymbol{\beta}$$.&#x20;
 * The design matrix, $$\mathbf{X}$$. 行数与样本大小相对应，列由设计（通常是处理设计）确定。
 * Variance-covariance matrix, $$\mathbf{V}$$. 该矩阵指定了随机变化的来源及其大小。在混合模型中，\$$\mathbf{V}=\mathbf{Z} \mathbf{G} \mathbf{Z}^{\prime}+\mathbf{R}$. $\mathbf{G}\$$ 给出随机模型效应的协方差，通常与实验设计的元素相对应。
 * $$\mathbf{Z}$$列指定随机模型效果的样本大小和结构

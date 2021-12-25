@@ -17,7 +17,7 @@ Designs with two or more blocking criteria but only one size experimental unit m
 
 ![](broken-reference)
 
-### **1.Completely Randomized Design (CRD) **
+### **1.Completely Randomized Design (CRD)**&#x20;
 
 四个A×B处理组合中的每一个都随机分配给四个单元
 
@@ -28,7 +28,7 @@ class a b;
 model y = a b a*b;
 ```
 
-### **2.Randomized Complete Block** 
+### **2.Randomized Complete Block**&#x20;
 
 我们假设有一个标准可以将16个单位分为四个块，每个块有四个单元。 将处理组合随机分配给每个块中的单元，以便每个处理组合在每个块中仅出现一次。
 
@@ -88,8 +88,8 @@ $$
 \mu_{i j}=\mu+\alpha_{i}+\beta_{j}+\alpha \beta_{i j},
 $$
 
-* where $$\mu$$ is the overall mean or intercept, 
-* $$\alpha_{i}$$ and $$\beta_{j}$$ are the main effects of $$\mathrm{A}$$ and $$\mathrm{B}$$, respectively, 
+* where $$\mu$$ is the overall mean or intercept,&#x20;
+* $$\alpha_{i}$$ and $$\beta_{j}$$ are the main effects of $$\mathrm{A}$$ and $$\mathrm{B}$$, respectively,&#x20;
 * $$\alpha \beta_{i j}$$ is the $$\mathrm{A} \times \mathrm{B}$$ interaction term.
 
 **For the CRD**, there is no blocking, the model can be written as follows:
@@ -100,7 +100,7 @@ $$
 
 where $$e_{i j k}$$ is typically assumed iid $$\mathrm{N}\left(0, \sigma^{2}\right) .$$ This is the classic two-way ANOVA model.
 
-**For the RCB**, there is blocking and there is only one size of experimental unit assigned to A × B treatment combinations, e, the experiment design component is decomposed as$$E_{i j k}=r_{k}+e_{i j k},$$ where $$r_{k}$$ denotes the $$k^{\text {th }}$$**block effect **and $$e_{i j k}$$ denotes experimental error. The model is thus
+**For the RCB**, there is blocking and there is only one size of experimental unit assigned to A × B treatment combinations, e, the experiment design component is decomposed as$$E_{i j k}=r_{k}+e_{i j k},$$ where $$r_{k}$$ denotes the $$k^{\text {th }}$$**block effect** and $$e_{i j k}$$ denotes experimental error. The model is thus
 
 $$
 y_{i j k}=\mu_{i j}+r_{k}+e_{i j k}=\mu+\alpha_{i}+\beta_{j}+\alpha \beta_{i j}+r_{k}+e_{i j k}
@@ -108,5 +108,5 @@ $$
 
 ....
 
-For Split-Plot, Whole-Plot as RCBRD, 
+For Split-Plot, Whole-Plot as RCBRD,&#x20;
 

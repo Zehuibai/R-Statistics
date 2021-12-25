@@ -14,7 +14,7 @@ where $$f$$ is a nonparametric response function with no explicit functional for
 
 ### Definition
 
-The **loess (locally estimated scatterplot smoothing) **method 在每个数据点附近上评估f，并在散点图上绘制连接拟合点的分段多项式曲线。在两个以上的维度中，loess 回归方法通过拟合点构造平坦表面。本地散点平滑估计（Locally Estimated Scatterplot Smoothing，LOESS），事先不用确定参数数量，每次预测的时候，用指定的样本点周围的样本点进行临时训练，确定参数。
+The **loess (locally estimated scatterplot smoothing)** method 在每个数据点附近上评估f，并在散点图上绘制连接拟合点的分段多项式曲线。在两个以上的维度中，loess 回归方法通过拟合点构造平坦表面。本地散点平滑估计（Locally Estimated Scatterplot Smoothing，LOESS），事先不用确定参数数量，每次预测的时候，用指定的样本点周围的样本点进行临时训练，确定参数。
 
 通过在每个点的局部邻域中拟合多项式回归函数，可以对数据点处的响应函数进行估计。邻域的半径由这些邻域包含的数据点的预定比例（称为平滑参数）确定。多项式回归（通常是线性或二次方）通过加权最小二乘法进行拟合，而权重越小则指向距中心的距离越远。
 
@@ -26,7 +26,7 @@ $$
 
 for every $$\mathbf{x}=\left(x_{1}, \ldots, x_{k}\right)$$ in $$\mathscr{N}_{p}\left(\mathbf{x}^{0}\right)$$
 
-**The weighted least-squares **predicted line $$\hat{l}(\mathbf{x})=\hat{\beta}_{0}+\hat{\beta}_{1}\left(x_{1}-x_{1}^{0}\right)+\cdots+\hat{\beta}_{k}\left(x_{k}-x_{k}^{0}\right)$$ minimizes
+**The weighted least-squares** predicted line $$\hat{l}(\mathbf{x})=\hat{\beta}_{0}+\hat{\beta}_{1}\left(x_{1}-x_{1}^{0}\right)+\cdots+\hat{\beta}_{k}\left(x_{k}-x_{k}^{0}\right)$$ minimizes
 
 $$
 \sum_{\mathbf{x}_{i} \in \mathscr{N}_{p}\left(\mathbf{x}^{0}\right)}\left[y_{i}-l\left(\mathbf{x}_{i}\right)\right]^{2} w\left(\frac{\left\|\mathbf{x}_{i}-\mathbf{x}^{0}\right\|}{r\left(\mathbf{x}^{0}\right)}\right)
@@ -358,7 +358,7 @@ $$
 g(\pi)=\operatorname{logit}(\pi)=\ln \left(\frac{\pi}{1-\pi}\right)=s_{0}+s_{1}\left(x_{1}\right)+\cdots+s_{k}\left(x_{k}\right)
 $$
 
- 其中s0是截距，$$s_{1}(\cdot), \ldots, s_{k}(\cdot)$$是Loess或单变量样条平滑器。
+&#x20;其中s0是截距，$$s_{1}(\cdot), \ldots, s_{k}(\cdot)$$是Loess或单变量样条平滑器。
 
 该模型可以改写为
 
@@ -366,7 +366,7 @@ $$
 \pi=\frac{\exp \left\{s_{0}+s_{1}\left(x_{1}\right)+\cdots+s_{k}\left(x_{k}\right)\right\}}{1+\exp \left\{s_{0}+s_{1}\left(x_{1}\right)+\cdots+s_{k}\left(x_{k}\right)\right\}}
 $$
 
-并且可以用于针对预测变量的某些特定值来估计事件y = 1的概率。 
+并且可以用于针对预测变量的某些特定值来估计事件y = 1的概率。&#x20;
 
 作为纯非参数逻辑模型的替代，可以考虑半参数模型。 在此模型中，某些预测变量具有线性影响，因此仅需为这些变量估算斜率。 半参数模型的形式为
 
@@ -481,11 +481,11 @@ run;
 
 ### Nonparametric Poisson Model
 
-假设响应变量Y假定为整数值0、1、2等。这种观察类型称为计数数据。 如果存在以下特征，则计数频率遵循泊松分布： 
+假设响应变量Y假定为整数值0、1、2等。这种观察类型称为计数数据。 如果存在以下特征，则计数频率遵循泊松分布：&#x20;
 
-* 样本均值大约等于样本方差。 
-* 较小的值是最常见的观察结果。 
-* 大观察很少发生。 
+* 样本均值大约等于样本方差。&#x20;
+* 较小的值是最常见的观察结果。&#x20;
+* 大观察很少发生。&#x20;
 * 观察不到太多零。
 
 

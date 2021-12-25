@@ -32,7 +32,7 @@ $$
 A=W \Sigma W^{T}
 $$
 
-注意:** 要进行特征分解, 矩阵**$$A$$**必须为方阵。那么如果**$$A$$**不是方阵, 即行和列不相同时, 我们还可以对矩阵进行分解:SVD。**
+注意: **要进行特征分解, 矩阵**$$A$$**必须为方阵。那么如果**$$A$$**不是方阵, 即行和列不相同时, 我们还可以对矩阵进行分解:SVD。**
 
 ## SVD
 
@@ -48,7 +48,7 @@ $$
 
 ![](https://images2015.cnblogs.com/blog/1042406/201701/1042406-20170105115457425-1545975626.png)
 
-#### 求SVD分解后的 $$U, \Sigma, V$$ 
+#### 求SVD分解后的 $$U, \Sigma, V$$&#x20;
 
 如果我们将A的转置和A做矩阵乘法, 那么会得到 $$n \times n$$ 的一个方阵 $$A^{T} A_{\circ}$$ 既然 $$A^{T} A$$ 是方阵, 那么我们就可以进行特征分解, 得到的特征值和特征向量满足下式:这样我们就可以得到矩阵 $$A^{T} A$$ 的$$n$$个特征值和对应的$$n$$个特征向量 $$v$$ 了 。 将 $$A^{T} A$$ 的所有特征向量张成一个 $$n \times n$$ 的矩阵$$V$$，就是我们SVD公式里面的$$V$$矩 阵了。一般我们将$$V$$中的每个特征向量叫做$$A$$的右奇异向量。
 
@@ -116,7 +116,7 @@ $$
 \lambda_1= 3; u_1 = \left( \begin{array}{ccc} 1/\sqrt{6} \\ 2/\sqrt{6} \\ 1/\sqrt{6} \end{array} \right); \lambda_2= 1; u_2 = \left( \begin{array}{ccc} 1/\sqrt{2} \\ 0 \\ -1/\sqrt{2} \end{array} \right);  \lambda_3= 0; u_3 = \left( \begin{array}{ccc} 1/\sqrt{3} \\ -1/\sqrt{3} \\ 1/\sqrt{3} \end{array} \right)
 $$
 
-**Alternative 1: **利用 $$Av_i = \sigma_i u_i, \ \ i=1,2$$ 求奇异值：
+**Alternative 1:** 利用 $$Av_i = \sigma_i u_i, \ \ i=1,2$$ 求奇异值：
 
 $$
 \left( \begin{array}{ccc} 0& 1\\  1& 1\\   1& 0 \end{array} \right) \left( \begin{array}{ccc} 1/\sqrt{2} \\ 1/\sqrt{2} \end{array} \right) = \sigma_1 \left( \begin{array}{ccc} 1/\sqrt{6} \\ 2/\sqrt{6} \\ 1/\sqrt{6} \end{array} \right) \Rightarrow  \sigma_1=\sqrt{3}
@@ -126,7 +126,7 @@ $$
 \left( \begin{array}{ccc} 0& 1\\  1& 1\\   1& 0 \end{array} \right) \left( \begin{array}{ccc} -1/\sqrt{2} \\ 1/\sqrt{2} \end{array} \right) = \sigma_2 \left( \begin{array}{ccc} 1/\sqrt{2} \\ 0 \\ -1/\sqrt{2} \end{array} \right) \Rightarrow  \sigma_2=1
 $$
 
-**Alternative 2: **$$\sigma_i = \sqrt{\lambda_i}$$ 直接求奇异值are $$\sqrt{3},1$$
+**Alternative 2:** $$\sigma_i = \sqrt{\lambda_i}$$ 直接求奇异值are $$\sqrt{3},1$$
 
 最终得到A的奇异值分解为：
 

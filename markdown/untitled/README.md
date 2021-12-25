@@ -2,7 +2,7 @@
 
 ## Basic Markdown
 
-### Chuks output option 
+### Chuks output option&#x20;
 
 The following table summarises which types of output each option suppresses:
 
@@ -20,7 +20,7 @@ The following table summarises which types of output each option suppresses:
 
 ### Not certain heading number
 
-If you do not want a **certain **heading to be numbered, you can add `{-}` or `{.unnumbered}` after the heading, e.g.,
+If you do not want a **certain** heading to be numbered, you can add `{-}` or `{.unnumbered}` after the heading, e.g.,
 
 ```
 # Preface {-}
@@ -76,7 +76,7 @@ You can define relative links and image paths in your rendered files to help rea
 
 ## Table
 
-[https://www.tablesgenerator.com/markdown_tables](https://www.tablesgenerator.com/markdown_tables)
+[https://www.tablesgenerator.com/markdown\_tables](https://www.tablesgenerator.com/markdown\_tables)
 
 ### Content Align
 

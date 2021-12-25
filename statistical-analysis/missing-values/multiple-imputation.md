@@ -82,12 +82,12 @@ df_select %>%
 | Mean comparisons between values of responders (Not missing) and non-responders (Missing) on the Tampa scale variable. |
 | --------------------------------------------------------------------------------------------------------------------- |
 
-|                                  |           |             |            |       |
-| -------------------------------- | --------- | ----------- | ---------- | ----- |
-| Missing data analysis: Tampa_MAR |           | Not missing | Missing    | p     |
-| Pain                             | Mean (SD) | 5.0 (2.1)   | 6.3 (2.3)  | 0.017 |
-| Disability                       | Mean (SD) | 12.1 (4.3)  | 9.8 (4.0)  | 0.040 |
-| Age                              | Mean (SD) | 40.1 (8.9)  | 41.3 (7.1) | 0.594 |
+|                                   |           |             |            |       |
+| --------------------------------- | --------- | ----------- | ---------- | ----- |
+| Missing data analysis: Tampa\_MAR |           | Not missing | Missing    | p     |
+| Pain                              | Mean (SD) | 5.0 (2.1)   | 6.3 (2.3)  | 0.017 |
+| Disability                        | Mean (SD) | 12.1 (4.3)  | 9.8 (4.0)  | 0.040 |
+| Age                               | Mean (SD) | 40.1 (8.9)  | 41.3 (7.1) | 0.594 |
 
 ### Generate missing values
 
@@ -241,14 +241,14 @@ data = data %>%
 head(data)
 ```
 
-| pre\<dbl> | post\<dbl> | post_mcar\<dbl> | post_mar\<dbl> | frac\<dbl> |
-| --------- | ---------- | --------------- | -------------- | ---------- |
-| 29.29612  | 21.68335   | 21.68335        | 21.68335       | 0.4        |
-| 29.11421  | 17.98265   | 17.98265        | 17.98265       | 0.4        |
-| 30.15447  | 19.81169   | 19.81169        | NA             | 0.4        |
-| 30.29253  | 17.42929   | 17.42929        | 17.42929       | 0.4        |
-| 29.59090  | 14.03217   | 14.03217        | NA             | 0.4        |
-| 25.95561  | 13.94315   | 13.94315        | 13.94315       | 0.4        |
+| pre\<dbl> | post\<dbl> | post\_mcar\<dbl> | post\_mar\<dbl> | frac\<dbl> |
+| --------- | ---------- | ---------------- | --------------- | ---------- |
+| 29.29612  | 21.68335   | 21.68335         | 21.68335        | 0.4        |
+| 29.11421  | 17.98265   | 17.98265         | 17.98265        | 0.4        |
+| 30.15447  | 19.81169   | 19.81169         | NA              | 0.4        |
+| 30.29253  | 17.42929   | 17.42929         | 17.42929        | 0.4        |
+| 29.59090  | 14.03217   | 14.03217         | NA              | 0.4        |
+| 25.95561  | 13.94315   | 13.94315         | 13.94315        | 0.4        |
 
 ```
 ## check on the fraction of values missing in each group.
@@ -258,11 +258,11 @@ data %>% group_by(frac) %>%
             Frac_missing=N_missing/N)
 ```
 
-| frac\<dbl> | N\<int> | N_missing\<int> | Frac_missing\<dbl> |
-| ---------- | ------- | --------------- | ------------------ |
-| 0.2        | 8       | 2               | 0.2500000          |
-| 0.3        | 138     | 41              | 0.2971014          |
-| 0.4        | 854     | 342             | 0.4004684          |
+| frac\<dbl> | N\<int> | N\_missing\<int> | Frac\_missing\<dbl> |
+| ---------- | ------- | ---------------- | ------------------- |
+| 0.2        | 8       | 2                | 0.2500000           |
+| 0.3        | 138     | 41               | 0.2971014           |
+| 0.4        | 854     | 342              | 0.4004684           |
 
 ## Multiple Imputation
 
@@ -270,7 +270,7 @@ data %>% group_by(frac) %>%
 
 There are two primary schools about how to deal with the missing data problem.
 
-On one side, there are model-based methods mainly built around the formulation of the **Expectation-Maximization (EM) algorithm **made popular by Dempster, Laird, and Rubin (1977). This technique makes the** computation of the Maximum Likelihood (ML)estimator feasible in problems affected by missing data. **In short, the EM algorithm is an i**terative procedure that produces maximum likelihood estimates. The idea is to treat the missing data as random variables to be removed by integration from the log-likelihood function as if they were not sampled.** The EM algorithm allows dealing with the missing data and parameter estimation in the same step. 
+On one side, there are model-based methods mainly built around the formulation of the **Expectation-Maximization (EM) algorithm** made popular by Dempster, Laird, and Rubin (1977). This technique makes the **computation of the Maximum Likelihood (ML)estimator feasible in problems affected by missing data.** In short, the EM algorithm is an i**terative procedure that produces maximum likelihood estimates. The idea is to treat the missing data as random variables to be removed by integration from the log-likelihood function as if they were not sampled.** The EM algorithm allows dealing with the missing data and parameter estimation in the same step.&#x20;
 
 The major drawback of this model-based method is the **requirement of the explicit modeling of joint multivariate distributions** and, thus, tend to be limited to variables deemed to be of substantive relevance (Graham, Cumsille, and Elek-Fisk, 2003). Furthermore, this approach requires the correct specification of usually high-dimensional distributions, even of aspects which have never been the focus of empirical research and for which justification is hardly available. According to Graham (2009), the parameter estimators (means, variances, and covariances) from the EM algorithm are preferable over a wide range of possible estimators, based on the fact that they enjoy the properties of maximum likelihood estimation. The second approach deals with model-based missing data procedures and was introduced by Rubin (1987) with his concept of Multiple Imputation (MI). Instead of removing the missing values by integration as EM does, MI simulates a sample of m values from the posterior predictive distribution of the missing values given the observed. Each missing value is replaced by this approach with m>1 possible values, accounting for uncertainty in the values predicting the true but unobserved values. The substituted values are called “imputed” values, hence the term “Multiple Imputation.”
 
@@ -286,7 +286,7 @@ The second approach deals with model-based missing data procedures and was intro
 
 Multiple imputation shares with single imputation the two basic advantages already mentioned, namely, the ability to use complete-data methods of analysis and the ability to incorporate the data collector’s knowledge. In fact, the second basic advantage is not only retained but enchanced because multiple imputations allow data collectors to use their knowledge to reflect uncertainty about whch values to impute. This uncertainty is of two types: sampling variability assuming the reasons for nonresponse are known and variability due to uncertainty about the reasons for nonresponse. Under each posited model for nonresponse, two or more imputations are created to reflect sampling variability under that model; imputations under more than one model for nonresponse reflect uncertainty about the reasons for nonresponse.
 
-There exist three extremely important advantages to multiple imputation over single imputation. 
+There exist three extremely important advantages to multiple imputation over single imputation.&#x20;
 
 * First, when imputations are randomly drawn in an attempt to represent the distribution of the data, multiple imputation increases the efficiency of estimation.
 * The second distinct advantage of multiple imputation over single impu- tation is that when the multiple imputations represent repeated random draws under a model for nonresponse, valid inferences- that is, ones that reflect the additional variability due to the missing values under that model -are obtained simply by combining complete-data inferences in a straightforward manner.
@@ -294,16 +294,16 @@ There exist three extremely important advantages to multiple imputation over sin
 
 > 多重归因与单一归因共有两个已经提到的基本优点，即使用完整数据分析方法的能力和合并数据收集者知识的能力。实际上，第二个基本优点不仅保留，而且具有吸引力，因为多重估算使数据收集者可以利用其知识来反映有关估算值的不确定性。这种不确定性有两种类型：假定已知无响应原因的采样变异性和由于无响应原因的不确定性造成的变异性。在每个无响应的假定模型下，都会创建两个或多个插补，以反映该模型下的抽样变异性。在不答复的一种以上模型下的估算反映了对不答复原因的不确定性。
 >
->  相对于单一插补，多重插补存在三个极其重要的优势。
+> &#x20;相对于单一插补，多重插补存在三个极其重要的优势。
 >
 > * 首先，多次插补会提高估算效率。
-> * 多重插补相对于单一插补的第二个独特优势是，当多个插补代表无响应模型下的重复随机抽取时，有效推论-即由于该模型下缺少值而反映出额外可变性的推论-通过以简单的方式组合完整数据推断即可轻松获得。 
+> * 多重插补相对于单一插补的第二个独特优势是，当多个插补代表无响应模型下的重复随机抽取时，有效推论-即由于该模型下缺少值而反映出额外可变性的推论-通过以简单的方式组合完整数据推断即可轻松获得。&#x20;
 > * 多重插补的第三个独特优势是，通过在多个模型下生成重复随机绘制的插补，可以简单地反复使用完整数据方法，直接研究对无响应的各种模型的推论的敏感性。
 
-There are three obvious disadvantages of multiple imputation relative to single imputation. 
+There are three obvious disadvantages of multiple imputation relative to single imputation.&#x20;
 
-* First, more work is needed to produce multiple imputations than single imputations. 
-* Second, more space is needed to store a multiply-imputed data set. Thud, more work is needed to analyze a multiply-imputed data set than a singly-imputed data set. These disadvantages are not serious when m is modest. 
+* First, more work is needed to produce multiple imputations than single imputations.&#x20;
+* Second, more space is needed to store a multiply-imputed data set. Thud, more work is needed to analyze a multiply-imputed data set than a singly-imputed data set. These disadvantages are not serious when m is modest.&#x20;
 * Modest m is adequate when fractions of missing information are modest. When fractions of missing information are large, modest-m multiple imputation is not fully satisfactory, but then single imputation can be disastrous.
 
 > 首先，要产生多个插补而不是单个插补需要更多的工作。 \
@@ -362,7 +362,7 @@ $$\dot y =\dot\beta_0 + X_\mathrm{mis}\dot\beta_1+\dot\epsilon$$, where $$\dot\e
 * $$X_{obs}$$ the n1 × q matrix of predictors of rows with observed data in y
 * $$X_{mis}$$ the n0 × q matrix of predictors of rows with missing data in y
 
-The algorithm uses a ridge parameter κ to evade problems with singular matrices. This number should be set to a positive number close to zero, e.g., 0.0001 
+The algorithm uses a ridge parameter κ to evade problems with singular matrices. This number should be set to a positive number close to zero, e.g., 0.0001&#x20;
 
 1. Calculate the cross-product matrix $$S=X\mathrm{obs}^\prime X\mathrm{obs}$$.
 2. Calculate $$V = (S+\mathrm{diag}(S)\kappa)^{-1}$$ with some small κ.
@@ -455,7 +455,7 @@ aggr(iris.mis, col=c('navyblue','red'), numbers=TRUE, labels=names(iris.mis),
      cex.axis=.7, gap=3, ylab=c("Histogram  of missing data","Pattern"))
 ```
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MRt1rIudcHYDxTcux_Q%2Fuploads%2Fv16J62LD5yhnnnjXECzV%2Ffile.png?alt=media)
+![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MRt1rIudcHYDxTcux\_Q%2Fuploads%2Fv16J62LD5yhnnnjXECzV%2Ffile.png?alt=media)
 
 ```
 # marginplot(data[c(1,2)])一次只表示2个变量的缺失情况
@@ -463,7 +463,7 @@ aggr(iris.mis, col=c('navyblue','red'), numbers=TRUE, labels=names(iris.mis),
 marginplot(iris.mis[c(2,3)])
 ```
 
-![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MRt1rIudcHYDxTcux_Q%2Fuploads%2FkgxiTGjRK9uxSstbchnP%2Ffile.png?alt=media)
+![](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MRt1rIudcHYDxTcux\_Q%2Fuploads%2FkgxiTGjRK9uxSstbchnP%2Ffile.png?alt=media)
 
 ### Imputation methods
 

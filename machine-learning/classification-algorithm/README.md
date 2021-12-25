@@ -1,8 +1,8 @@
 # Classification Algorithm
 
-## Model evaluation 
+## Model evaluation&#x20;
 
-Historically, the performance of statistical models was largely based on **goodness-of-fit tests and assessment of residuals**. Unfortunately, misleading conclusions may follow from predictive models that pass these kinds of assessments (Breiman and others 2001). Today, it has become widely accepted that a more sound approach to assessing model performance is to** assess the predictive accuracy via loss functions**. Loss functions are metrics that compare the predicted values to the actual value (the output of a loss function is often referred to as the **error or pseudo residual**). When performing **resampling **methods, we assess the **predicted values for a validation set compared to the actual target value**. For example, in regression, one way to measure error is to take the difference between the actual and predicted value for a given observation (this is the usual definition of a residual in ordinary linear regression). The overall validation error of the model is computed by aggregating the errors across the entire validation data set.
+Historically, the performance of statistical models was largely based on **goodness-of-fit tests and assessment of residuals**. Unfortunately, misleading conclusions may follow from predictive models that pass these kinds of assessments (Breiman and others 2001). Today, it has become widely accepted that a more sound approach to assessing model performance is to **assess the predictive accuracy via loss functions**. Loss functions are metrics that compare the predicted values to the actual value (the output of a loss function is often referred to as the **error or pseudo residual**). When performing **resampling** methods, we assess the **predicted values for a validation set compared to the actual target value**. For example, in regression, one way to measure error is to take the difference between the actual and predicted value for a given observation (this is the usual definition of a residual in ordinary linear regression). The overall validation error of the model is computed by aggregating the errors across the entire validation data set.
 
 > 统计模型的性能主要基于拟合优度检验和残差评估。不幸的是，通过这些评估的预测模型可能会得出误导性的结论（Breiman等人，2001）。如今，一种更为合理的评估模型性能的方法已被广泛接受，即通过**损失函数**评估预测准确性。**损失函数是将预测值与实际值进行比较的度量（损失函数的输出通常称为误差或伪残差）**。在执行重采样方法时，我们将评估验证集的预测值与实际目标值进行比较。例如，在回归中，一种测量误差的方法是获取给定观察值的实际值与预测值之差（这是普通线性回归中对残差的通常定义）。通过汇总整个验证数据集中的误差来计算模型的总体验证误差。
 
@@ -53,10 +53,10 @@ Most models we assess in this book will report most, if not all, of these metric
   主要用于基于树的方法，通常称为纯度度量，其中较小的值表示节点主要包含来自单个类别的观测值。\
   **Objective: minimize**\
   ****
-* **Confusion matrix:**_ _When applying classification models, we often use a _confusion matrix_ to evaluate certain performance measures. A confusion matrix is simply a matrix that **compares actual categorical levels (or events) to the predicted categorical levels**. \
+* **Confusion matrix:** __ When applying classification models, we often use a _confusion matrix_ to evaluate certain performance measures. A confusion matrix is simply a matrix that **compares actual categorical levels (or events) to the predicted categorical levels**. \
 
-  * When we predict the right level, we refer to this as a _true positive_. 
-  * However, if we predict a level or event that did not happen this is called a _false positive_. 
+  * When we predict the right level, we refer to this as a _true positive_.&#x20;
+  * However, if we predict a level or event that did not happen this is called a _false positive_.&#x20;
   * Alternatively, when we do not predict a level or event and it does happen that this is called a _false negative_.
 
 > 应用分类模型时，我们经常使用混淆矩阵来评估某些绩效指标。 混淆矩阵只是将实际分类级别（或事件）与预测分类级别进行比较的矩阵。 当我们预测正确的水平时，我们将其称为真正的积极因素。 但是，如果我们预测未发生的级别或事件，则称为误报。 或者，当我们无法预测等级或事件时，确实发生了这种情况，即称为假阴性
@@ -164,14 +164,14 @@ $$
 
 ### Rates Assuming a Predicted Condition
 
-* Positive Predictive Value (PPV) or Precision = A / (A + B) 
+* Positive Predictive Value (PPV) or Precision = A / (A + B)&#x20;
   * The positive predictive value is the proportion of the units with a predicted positive condition for which the true condition is positive
 *   Positive Predictive Value Adjusted for Known Prevalence
 
     $$
     \text { Adjusted } P P V=\frac{\text { sensitivity } \times \text { known prevalence }}{\text { sensitivity } \times \text { known prevalence }+(1-\text { specificity }) \times(1-\text { known prevalence })}
     $$
-* Negative Predictive Value (NPV) = D / (C + D) 
+* Negative Predictive Value (NPV) = D / (C + D)&#x20;
   * The negative predictive value is the proportion of the units with a predicted negative condition for which the true condition is negative.
 *   Negative Predictive Value Adjusted for Known Prevalence
 
@@ -219,7 +219,7 @@ The positive likelihood ratio is the ratio of the true positive rate (sensitivit
 
 > 阳性似然比是真实阳性率（敏感性）与错误阳性率（1-特异性）之比。 此似然比统计量度了检验值，以增加对阳性诊断的确定性。
 
-#### Negative Likelihood Ratio (LR-) = FNR / TNR 
+#### Negative Likelihood Ratio (LR-) = FNR / TNR&#x20;
 
 The negative likelihood ratio is the ratio of the false negative rate to the true negative rate (specificity).
 
