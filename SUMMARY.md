@@ -37,8 +37,6 @@
   * [MICE R](statistical-analysis/missing-values/multiple-imputation.md)
   * [Proc MI](statistical-analysis/missing-values/proc-mi.md)
   * [MICE RF Masterarbeit](statistical-analysis/missing-values/mice-rf.md)
-* [Sample Size](statistical-analysis/untitled-1/README.md)
-  * [Wilcoxon rank-sum test](statistical-analysis/untitled-1/wilcoxon-rank-sum-test.md)
 
 ## Machine Learning
 
@@ -50,7 +48,6 @@
   * [Linear Discriminant Analysis (LDA)](machine-learning/classification-algorithm/linear-discriminant-analysis.md)
   * [Multivariate Adaptive Regression Spline](machine-learning/classification-algorithm/mars.md)
 * [Dimension Reduction](machine-learning/dimension-reduction/README.md)
-  * [Principal Component Analysis (PCA)](machine-learning/dimension-reduction/principal-component-analysis-pca.md)
   * [Singular Value Decomposition (SVD)](machine-learning/dimension-reduction/singular-value-decomposition-svd.md)
   * [Locally Linear Embedding (LLE)](machine-learning/dimension-reduction/locally-linear-embedding-lle.md)
   * [Generalized Low Rank Models](machine-learning/dimension-reduction/generalized-low-rank-models.md)
