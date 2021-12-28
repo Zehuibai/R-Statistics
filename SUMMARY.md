@@ -14,7 +14,6 @@
 * [SQL-DBI](datamanagement/sql.md)
 * [Apache Spark](datamanagement/spark/README.md)
   * [Spark using R](datamanagement/spark/untitled.md)
-* [Basic](datamanagement/basic.md)
 * [Block Randomization](datamanagement/block-randomization.md)
 * [Randomlist Envelopes](datamanagement/randomlist-envelopes.md)
 
