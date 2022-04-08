@@ -8,7 +8,6 @@
 * [SQL-DBI](datamanagement/sql.md)
 * [Apache Spark](datamanagement/spark/README.md)
   * [Spark using R](datamanagement/spark/untitled.md)
-* [Block Randomization](datamanagement/block-randomization.md)
 
 ## Regression
 
