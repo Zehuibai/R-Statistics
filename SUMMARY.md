@@ -5,17 +5,9 @@
 ## Datamanagement
 
 * [Working](datamanagement/working.md)
-* [Data Management](datamanagement/untitled-1/README.md)
-  * [Import/Export](datamanagement/untitled-1/untitled-2.md)
-  * [Date lubridate](datamanagement/untitled-1/date.md)
-  * [forcats](datamanagement/untitled-1/forcats.md)
-  * [Strings](datamanagement/untitled-1/strings.md)
-  * [Applys](datamanagement/untitled-1/applys.md)
 * [SQL-DBI](datamanagement/sql.md)
 * [Apache Spark](datamanagement/spark/README.md)
   * [Spark using R](datamanagement/spark/untitled.md)
-* [Block Randomization](datamanagement/block-randomization.md)
-* [Randomlist Envelopes](datamanagement/randomlist-envelopes.md)
 
 ## Regression
 
