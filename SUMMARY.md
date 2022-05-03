@@ -9,19 +9,16 @@
 * [Apache Spark](datamanagement/spark/README.md)
   * [Spark using R](datamanagement/spark/untitled.md)
 
-## Regression
-
-* [Genaralized linear model](regression/regression.md)
-* [Mixed Model](regression/untitled/README.md)
-  * [Generalized Linear Regression Models for Repeated Measures](regression/untitled/generalized-linear-regression-models-for-repeated-measures.md)
-  * [Randomized Block Design](regression/untitled/single-random-effect.md)
-  * [GEE](regression/untitled/gee.md)
-  * [Proc NLMIXED](regression/untitled/proc-nlmixed.md)
-  * [SAS Models with Single Random Effect](regression/untitled/sas-models-with-single-random-effect.md)
-  * [Models with Multiple Random Effects](regression/untitled/models-with-multiple-random-effects.md)
-
 ## Statistical Analysis
 
+* [Genaralized linear model](statistical-analysis/regression.md)
+* [Mixed Model](statistical-analysis/untitled/README.md)
+  * [Generalized Linear Regression Models for Repeated Measures](statistical-analysis/untitled/generalized-linear-regression-models-for-repeated-measures.md)
+  * [Randomized Block Design](statistical-analysis/untitled/single-random-effect.md)
+  * [GEE](statistical-analysis/untitled/gee.md)
+  * [Proc NLMIXED](statistical-analysis/untitled/proc-nlmixed.md)
+  * [SAS Models with Single Random Effect](statistical-analysis/untitled/sas-models-with-single-random-effect.md)
+  * [Models with Multiple Random Effects](statistical-analysis/untitled/models-with-multiple-random-effects.md)
 * [Resampling Methods for CIs](statistical-analysis/resampling-methods-for-cis.md)
 * [Nonparametric Regression](statistical-analysis/proc-nparlway.md)
 * [Multiple Imputation](statistical-analysis/missing-values/README.md)
