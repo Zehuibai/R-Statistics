@@ -46,7 +46,7 @@ If you do not want a **certain** heading to be numbered, you can add `{-}` or `{
 This site was built using [GitHub Pages](https://pages.github.com/).
 ```
 
-This site was built using [GitHub Pages](https://pages.github.com).
+This site was built using [GitHub Pages](https://pages.github.com/).
 
 ### Relative links
 

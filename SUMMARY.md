@@ -11,7 +11,6 @@
 
 ## Statistical Analysis
 
-* [Genaralized linear model](statistical-analysis/regression.md)
 * [Mixed Model](statistical-analysis/untitled/README.md)
   * [Generalized Linear Regression Models for Repeated Measures](statistical-analysis/untitled/generalized-linear-regression-models-for-repeated-measures.md)
   * [Randomized Block Design](statistical-analysis/untitled/single-random-effect.md)
