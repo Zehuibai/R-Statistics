@@ -4,10 +4,9 @@
 
 ## Datamanagement
 
-* [Working](datamanagement/working.md)
-* [SQL-DBI](datamanagement/sql.md)
-* [Apache Spark](datamanagement/spark/README.md)
-  * [Spark using R](datamanagement/spark/untitled.md)
+* [SQL-DBI](datamanagement/sql-dbi.md)
+* [Apache Spark](datamanagement/apache-spark/README.md)
+  * [Spark using R](datamanagement/apache-spark/spark-using-r.md)
 
 ## Statistical Analysis
 
